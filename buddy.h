@@ -2,8 +2,12 @@
 
 typedef struct block
 {
+    int init;
     int size;
-    int position;
     int flag; //0 = free, 1 = allocated
-    struct block* next;
+    int addr;
+    struct block  *parent;
+    struct block  *left;
+    struct block  *right;
+
 }Block;
